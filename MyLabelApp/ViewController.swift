@@ -14,7 +14,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let labelFrame = CGRect(x: 0, y: 0, width: 200, height: 50)
+        myLabel.frame = labelFrame
+        myLabel.numberOfLines = 0
+        myLabel.lineBreakMode = .byWordWrapping
+        myLabel.text = "Hello! I'm myLabel"
+        myLabel.sizeToFit()
+        myLabel.adjustsFontSizeToFitWidth = true
+        myLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        myLabel.textColor = .black
+        myLabel.shadowColor = UIColor.lightGray
+        myLabel.shadowOffset = CGSize(width: 2, height: 2)
+        myLabel.center = self.view.center
+        self.view.addSubview(myLabel)
     }
 
 
